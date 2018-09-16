@@ -1,1 +1,1 @@
-include ':app', ':eventbuslibrary'
+include ':app', ':eventbuslibrary', ':popwindowlibrary'
