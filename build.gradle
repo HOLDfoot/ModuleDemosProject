@@ -11,6 +11,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add green dao plugin
         classpath 'me.tatarka:gradle-retrolambda:3.6.1' // add for rxjavalibrary
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1' // add for retrofit demo
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
