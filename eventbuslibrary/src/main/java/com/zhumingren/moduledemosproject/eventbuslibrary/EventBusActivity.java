@@ -44,6 +44,12 @@ public class EventBusActivity extends AppCompatActivity {
             }
         });
     }
+
+    // 子线程和主线程都能接收到, 后台界面的UI可以得到刷新
+    @Subscribe(threadMode = ThreadMode.BACKGROUND)
+    public void onSecondEvent(final SecondEvent event) {
+        Log.i("zmr", "event:" + event.getMessage() + " code= " + event.code);
+    }
     
     private void toast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show();

@@ -19,6 +19,15 @@ public class PostActivity extends AppCompatActivity {
                 EventBus.getDefault().post(new MessageEvent("Post message"));
             }
         });
+        findViewById(R.id.tv_hello).setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                SecondEvent secondEvent = new SecondEvent("secondEvent");
+                secondEvent.code = 1;
+                EventBus.getDefault().post(secondEvent);
+                return false;
+            }
+        });
     }
     
 }
