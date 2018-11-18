@@ -30,7 +30,7 @@ public class EventBusActivity extends AppCompatActivity {
     }
     
     // 子线程和主线程都能接收到, 后台界面的UI可以得到刷新
-    @Subscribe(threadMode = ThreadMode.BACKGROUND)
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(final MessageEvent event) {
         Log.i("zmr", "event:" + event.getMessage());
         Handler handler = new Handler(Looper.getMainLooper());
