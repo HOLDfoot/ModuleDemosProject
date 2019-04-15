@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.java-websocket:Java-WebSocket:1.4.0"
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
