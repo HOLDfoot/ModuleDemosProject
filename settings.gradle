@@ -1,1 +1,1 @@
-include ':applibrary', ':eventbuslibrary', ':popwindowlibrary', ':greendaolibrary', ':rxjava_getappinfo_library', ':rxjavalibrary', ':retrofitlibrary', ':websocketlib', ':websocketlib'
+include ':applibrary', ':eventbuslibrary', ':popwindowlibrary', ':greendaolibrary', ':rxjava_getappinfo_library', ':rxjavalibrary', ':retrofitlibrary', ':websocketlib'

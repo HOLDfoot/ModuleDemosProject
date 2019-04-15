@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,7 +37,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String Tag = "zhumr";
+    private static final String Tag = "zmr";
     private TextView textView;
     private Button button;
     private ImageView imageView;
@@ -52,7 +53,13 @@ public class MainActivity extends AppCompatActivity {
 
         //simpleFlowable();
         //flowableSubscribeConsumer();
-        rexSchedulerMap();
+        //rexSchedulerMap();
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                observableObserver();
+            }
+        });
     }
 
     private void testRxJava() {
@@ -309,8 +316,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void subscribe(@NonNull ObservableEmitter<String> e) throws Exception {
                 e.onNext("第一个");
-                e.onNext("第二个");
-                e.onComplete();
+                //e.onNext("第二个");
+                //e.onComplete();
             }
         });
 
